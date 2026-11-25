@@ -1,0 +1,48 @@
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; background: #17100d; }
+body { font-family: system-ui, -apple-system, "Segoe UI", sans-serif; color: #f5ead6; }
+#app { max-width: 1000px; margin: 0 auto; padding: 12px 16px 24px; }
+
+#hud { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+.brand { font-size: 22px; font-weight: 800; letter-spacing: 1px; color: #f7c948; margin-right: auto; }
+.brand span { font-size: 13px; font-weight: 400; color: #c9b18a; letter-spacing: 0; }
+.stat { background: #2a1f1a; border: 1px solid #4a382a; border-radius: 8px; padding: 6px 12px; font-weight: 700; font-variant-numeric: tabular-nums; }
+#timer.low { color: #ff7a6b; border-color: #ff7a6b; }
+#hearts { color: #ff7a6b; letter-spacing: 2px; }
+
+#orders { background: #241a15; border: 1px solid #4a382a; border-radius: 10px; padding: 10px 12px; margin-top: 10px; }
+#orders h2 { margin: 0 0 8px; font-size: 13px; letter-spacing: 2px; color: #f7c948; }
+#tickets { display: flex; gap: 10px; flex-wrap: wrap; }
+#no-orders { margin: 2px 0 0; color: #a98f6f; font-size: 13px; }
+.ticket { flex: 1 1 220px; background: #fdf6e3; color: #2a1f1a; border-radius: 8px; padding: 8px 10px; cursor: pointer; border: 3px solid transparent; }
+.ticket.selected { border-color: #f7c948; }
+.ticket .dish { font-weight: 800; font-size: 15px; }
+.ticket .price { float: right; font-weight: 800; color: #8a5a33; }
+.ticket .needs { margin-top: 6px; display: flex; gap: 6px; flex-wrap: wrap; }
+.chip { display: inline-block; background: #eee; border: 1px solid #ccc; border-radius: 20px; padding: 2px 8px; font-size: 12px; font-weight: 700; }
+.chip .dot { display: inline-block; width: 9px; height: 9px; border-radius: 50%; margin-right: 5px; vertical-align: 0; }
+.chip.done { background: #d9f2c9; border-color: #7ed957; text-decoration: line-through; }
+.chip .cook { color: #b3541e; font-weight: 800; }
+.patience { height: 6px; background: #e0d5bd; border-radius: 3px; margin-top: 8px; overflow: hidden; }
+.patience > div { height: 100%; background: #5da85d; }
+.patience.low > div { background: #d94f3d; }
+
+#stage { position: relative; margin-top: 10px; }
+#game { display: block; width: 100%; height: auto; border-radius: 10px; border: 1px solid #4a382a; cursor: pointer; background: #3a2b26; }
+#flash { position: absolute; top: 14px; left: 50%; transform: translateX(-50%); background: rgba(20, 14, 10, 0.88); border: 1px solid #f7c948; color: #ffe9a8; padding: 8px 18px; border-radius: 20px; font-weight: 800; font-size: 16px; pointer-events: none; }
+#flash.bad { border-color: #d94f3d; color: #ffb3ab; }
+#overlay { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; background: rgba(15, 10, 8, 0.72); border-radius: 10px; }
+#overlay[hidden] { display: none; }
+#flash[hidden] { display: none; }
+#overlay-card { background: #241a15; border: 1px solid #f7c948; border-radius: 12px; padding: 22px 28px; max-width: 520px; text-align: center; }
+#overlay-card h2 { margin: 0 0 8px; color: #f7c948; font-size: 26px; }
+#overlay-card p { margin: 6px 0; line-height: 1.5; }
+#overlay-card .big { font-size: 20px; font-weight: 800; }
+#overlay-card button { margin-top: 12px; }
+
+#controls { display: flex; gap: 10px; align-items: center; margin-top: 10px; flex-wrap: wrap; }
+button { background: #f7c948; color: #2a1f1a; border: none; border-radius: 8px; padding: 10px 16px; font-weight: 800; font-size: 14px; cursor: pointer; }
+button:disabled { background: #5a4a3a; color: #a98f6f; cursor: default; }
+button.secondary { background: #3a2b26; color: #f5ead6; border: 1px solid #4a382a; }
+#hint { color: #a98f6f; font-size: 13px; }
+footer { margin-top: 14px; color: #7a674f; font-size: 12px; text-align: center; }

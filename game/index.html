@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Golden Ladle — Midnight Street Kitchen</title>
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="app">
+  <header id="hud">
+    <div class="brand">GOLDEN LADLE <span>· midnight street kitchen</span></div>
+    <div class="stat" id="timer" title="Shift time left">03:00</div>
+    <div class="stat" id="coins" title="Coins earned">0 coins</div>
+    <div class="stat" id="hearts" title="Customers you can still lose">♥♥♥</div>
+    <div class="stat" id="combo" title="Serve streak">combo ×0</div>
+  </header>
+
+  <section id="orders" aria-label="Order board">
+    <h2>ORDER BOARD</h2>
+    <div id="tickets"></div>
+    <p id="no-orders">No orders yet — the night is young.</p>
+  </section>
+
+  <div id="stage">
+    <canvas id="game" width="960" height="540"></canvas>
+    <div id="flash" hidden></div>
+    <div id="overlay" hidden>
+      <div id="overlay-card"></div>
+    </div>
+  </div>
+
+  <div id="controls">
+    <button id="serve-btn" disabled>SERVE DISH (Enter)</button>
+    <button id="clear-btn">CLEAR PLATE (Bksp)</button>
+    <button id="pan-btn">TAKE FROM PAN (Space)</button>
+    <span id="hint">Click ingredients 1–6, or press their keys. Cooked items go to the pan — take them when ready.</span>
+  </div>
+
+  <footer>Golden Ladle — an original game. No network, no tracking, just cooking.</footer>
+</div>
+<script type="module" src="js/main.js"></script>
+</body>
+</html>
